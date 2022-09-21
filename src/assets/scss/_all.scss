@@ -1,0 +1,258 @@
+.content {
+    width: 70vw;
+    height: 90vh;
+    background-color: $color-bg-1;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 4px 20px rgba(#000000,.25);
+    overflow: hidden;
+    @media only screen and (max-width: 60rem) {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+      }
+
+    &__real {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+
+        .illustration {
+            width: 15rem;
+        }
+
+        .auth {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            &__text{
+                width: 100%;
+                height: 100%;
+                padding: 1rem;
+                background-color: transparent;
+                border: $color-accent 2px solid;
+                border-radius: .5rem;
+                outline: none;
+                
+                color: $color-text-1;
+            }
+        }
+    }
+}
+
+router-link{
+    text-decoration: none;
+}
+
+.action {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-family: inherit;
+    color: $color-text-1;
+    // padding: .8rem;
+    transition: all 0.4s;
+    &:hover {
+        color: $color-text-2;
+        cursor: pointer;
+    }
+}
+
+
+
+                .button{
+                    font-size: 1.6rem;
+                    padding: .6rem 1.6rem;
+                    border:$color-accent 2px solid;
+                    border-radius: 7px;
+                    color: $color-text-1;
+                    font-family: inherit;
+                    transition: all, 0.4s;
+                    &--filled{
+                        background-color: $color-accent;
+                        &:hover {
+                            background-color: lighten($color: $color-accent, $amount: 10);
+                            border-color: lighten($color: $color-accent, $amount: 10);
+                        }
+                    }
+                    &--loading {
+                        // background: linear-gradient(45deg, $color-accent 0%, lighten($color: $color-accent, $amount: 15) 30%);
+                        background: linear-gradient(45deg, lighten($color: $color-accent, $amount: 15) 31%, $color-accent 47%, lighten($color: $color-accent, $amount: 15) 59%);
+                        background-size: 400% 400%;
+                        animation: wave 1s infinite;
+                    }
+                    &--empty {
+                        background-color: $color-white-5;
+                        &:hover {
+                            background-color: darken($color: $color-white-5, $amount: 100);
+                            // border-color: lighten($color: $color-accent, $amount: 15);
+                        }
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        box-shadow: 0 0 5px rgba($color: $color-accent, $alpha: 0.5);
+                    }
+                }
+
+
+@keyframes wave {
+    from {
+        background-position: 100% 50%;
+      }
+      to {
+        background-position: 0% 50%;
+      }
+}
+
+// .content {
+//     width: 70vw;
+//     height: 90vh;
+//     background-color: $color-bg-1;
+//     border-radius: 2rem;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     box-shadow: 4px 4px 20px rgba(#000000,.25);
+
+//     &__real {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         .form {
+//             .textbox {
+//                 height: 3.2rem;
+//                 width: 30rem;
+//                 border-radius:7px;
+//                 border:$color-accent 2px solid;
+//                 background-color: $color-white-5;
+//                 display: flex;
+//                 align-items: center;
+//                 margin-bottom: 1.2rem;
+//                 // &__icon {
+//                 //     height: 24px;
+//                 //     width: 27px;
+//                 //     margin-left: 1rem;
+//                 //     &--user {
+//                 //         background-color:$color-text-1; /* defines the background color of the image */
+//                 //         mask: url(~@/assets/img/user_icon.svg) no-repeat center / contain;
+//                 //         -webkit-mask: url(~@/assets/img/user_icon.svg) no-repeat center / contain;
+//                 //     }
+//                 //     &--key {
+//                 //         background-color:$color-text-1; /* defines the background color of the image */
+//                 //         mask: url(~@/assets/img/key_icon.svg) no-repeat center / contain;
+//                 //         -webkit-mask: url(~@/assets/img/key_icon.svg) no-repeat center / contain;
+//                 //     }
+//                 // }
+//                 &__place {
+//                     width: 100%;
+//                     height: 100%;
+//                     background-color: transparent;
+//                     border: none;
+//                     padding-left: 1rem;
+//                     outline: none;
+//                     color: $color-text-1;
+//                 }
+//             }
+//             //form
+//             &__submit {
+//                 width: 30rem;
+//                 display: flex;
+//                 justify-content: space-around;
+//                 align-items: center;
+
+//                 .button{
+//                     font-size: 1.6rem;
+//                     padding: .6rem 1.6rem;
+//                     border:$color-accent 2px solid;
+//                     border-radius: 7px;
+//                     color: $color-text-1;
+//                     font-family: inherit;
+//                     transition: all, 0.4s;
+//                     &--filled{
+//                         background-color: $color-accent;
+//                     }
+//                     &--empty {
+//                         background-color: $color-white-5;
+
+//                     }
+//                     &:hover {
+//                         cursor: pointer;
+//                         box-shadow: 0 0 5px rgba($color: $color-accent, $alpha: 0.5);
+//                     }
+//                 }
+//             }
+//         }
+        
+//     }
+
+//     .illustration {
+//         width: 20rem;
+//         height: 20rem;
+//     }
+
+//     .action>*{
+//         margin: .3rem;
+//     }
+// }
+
+// .action {
+//     // justify-self: end;
+//     align-self: flex-end;
+//     background-color: transparent;
+//     border: none;
+//     font-size: 1.8rem;
+//     display: flex;
+//     align-items: end;
+//     justify-content: center;
+//     font-family: inherit;
+//     // justify-content: space-around;
+//     color: $color-text-1;
+//     padding: .8rem;
+//     transition: all 0.4s;
+//     &:hover {
+//         color: $color-text-2;
+//         .action__icon {
+//             background-color:$color-text-2;
+//         }
+//         cursor: pointer;
+//     }
+//     // &__icon {
+//     //     width: 24px;
+//     //     height: 24px;
+//     //     margin-right: 1.2rem;
+//     //     margin-left: 1.6rem;
+//     //     background-color:$color-text-1; /* defines the background color of the image */
+//     //     &--terminal{
+//     //         mask: url(~@/assets/img/terminal.svg) no-repeat center / contain;
+//     //         -webkit-mask: url(~@/assets/img/terminal.svg) no-repeat center / contain;
+//     //     }
+//     //     &--file{
+//     //         mask: url(~@/assets/img/new_file.svg) no-repeat center / contain;
+//     //         -webkit-mask: url(~@/assets/img/new_file.svg) no-repeat center / contain;
+//     //     }
+//     //     &--folder{
+//     //         mask: url(~@/assets/img/new_folder.svg) no-repeat center / contain;
+//     //         -webkit-mask: url(~@/assets/img/new_folder.svg) no-repeat center / contain;
+//     //     }
+//     // }
+// }
+
+// .loading {
+//     background-color: lighten($color-accent, 15%) !important;
+// }
+

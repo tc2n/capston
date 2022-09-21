@@ -1,0 +1,51 @@
+// COLOR VARIABLES
+$color-accent: #175DDC;
+$color-accent-hover: #175cdcde;
+$color-bg-1: #0E1316;
+$color-bg-2: #182125;
+$color-bg-3: #243238;
+$color-bg-darkest: #040506;
+$color-bg-darkest-2: #1A1F22;
+
+$color-text-1: #E5E5E5;
+$color-text-2: #B2B2B2;
+$color-text-3: #808080;
+
+$color-white-60: rgba(255,255,255, .6);
+$color-white-5: rgba(255,255,255, .05);
+
+$color-hr: #28363E;
+$color-alert: #CF2424;
+
+// FONT VARIABLES
+$font-primary: 'Source Sans Pro', sans-serif;
+
+
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //10px/16px == 62.5% i.e. now 1rem=10px;
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-text-1;
+    font-weight: 400;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(30,185,243);
+    background: linear-gradient(45deg, rgba(30,185,243,1) 0%, rgba(250,155,54,1) 47%, rgba(130,234,30,1) 100%);
+}

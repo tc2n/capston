@@ -1,0 +1,39 @@
+@keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loader {
+    --size: 30rem;
+    --speed: 7s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  
+    // width: var(--size);
+    // height: var(--size);
+    width: 60%;
+    height: 70%;
+    background-repeat: no-repeat;
+    mask-repeat: unset;
+    filter: blur(calc(var(--size) / 5));
+    // background-image: linear-gradient(hsl(158, 82, 57) 85%, hsl(252, 82, 57));
+    background-image: url(~@/assets/wibmo_clean.png);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    // border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    @media only screen and (max-width: 60rem) {
+      position: absolute;
+      overflow: hidden;
+      width: 50%;
+      height: 50%;
+    }
+    @media only screen and (max-width: 46rem) {
+      position: absolute;
+      overflow: hidden;
+      width: 70%;
+      height: 70%;
+    }
+  }
+  
