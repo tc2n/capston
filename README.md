@@ -1,4 +1,5 @@
-# capston
+# Capston Project
+Backend of the following project can be found in following repository: [bootcamp-oauth](https://github.com/weasel-codes/bootcamp-oauth)
 
 ## Project setup
 ```
